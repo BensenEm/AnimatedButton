@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="12dp"
+    android:viewportHeight="12"
+    android:viewportWidth="24">
+
+
+    <path
+        android:name="rectangle_fill"
+        android:fillColor="#CCDDFF"
+        android:pathData="M1,1 l22,0 l0,10 l-22,0 z" />
+
+    <group android:name="stroke">
+        <path
+            android:name="rectangle_stroke"
+            android:pathData="M1,1 l0,10 l22,0 l0,-10 z"
+            android:strokeColor="@color/colorPrimaryDark"
+            android:strokeWidth="1" />
+    </group>
+</vector>
