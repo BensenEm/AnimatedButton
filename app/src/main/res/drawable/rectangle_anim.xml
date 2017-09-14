@@ -4,11 +4,7 @@
     android:drawable="@drawable/rectangle">
 
     <target
-        android:name="rectangle_stroke"
+        android:name="rectangle_stroke_2"
         android:animation="@anim/stroke_anim"/>
-    <target
-        android:animation="@anim/backg_anim"
-        android:name="rectangle_fill"
-        />
 
 </animated-vector>

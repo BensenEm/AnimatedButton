@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/outer_frame"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="de.materna.myapplication.MainActivity" >
+    android:padding="16dp"
+    tools:context="de.materna.myapplication.MainActivity">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/cl"
+    <LinearLayout
+        android:id="@+id/frame"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/frame"
+        <Button
+            android:id="@+id/button"
+            fontPath="fonts/OpenSans-Light.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@+id/cl"
-            app:layout_constraintTop_toBottomOf="@+id/cl">
+            android:background="@drawable/button_main"
+            android:drawableLeft="@drawable/microphone"
+            android:drawablePadding="16dp"
+            android:onClick="buttonCallback"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:text="More"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color_selector"
+            android:textSize="24dp"
 
-            <ImageButton
-                android:id="@+id/button"
-                android:layout_width="150dp"
-                android:layout_height="75dp"
-                android:background="@android:color/transparent"
-                android:onClick="changeText"
-                android:scaleType="fitXY"
-                android:theme="@style/PrimaryFlatButton"
-                app:srcCompat="@drawable/rectangle_anim" />
+            tools:ignore="MissingPrefix" />
 
-            <TextView
-                android:id="@+id/button_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:clickable="false"
-                android:text="MORE" />
+        <Button
+            android:id="@+id/testButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rectangle_anim"
+            android:onClick="testButtonCallback"
+            android:text="Test button"
+            android:textAllCaps="false"
+            android:visibility="visible" />
 
-        </FrameLayout>
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 
 
 </FrameLayout>
